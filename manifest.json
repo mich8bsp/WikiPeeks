@@ -1,0 +1,16 @@
+{
+  "name": "WikiPeeks",
+  "description": "Shows thumbnails in wikipedia",
+  "version": "0.1",
+  "minimum_chrome_version": "16.0.884",
+  "permissions": ["https://*.wikipedia.org/*"],
+  "browser_action": {"default_popup": "popup.html",
+                     "default_icon": "icon.png"},
+  "content_scripts": [{
+
+      "matches": ["https://*.wikipedia.org/*"],
+      "js": ["getLinks.js", "jquery-2.1.4.min.js"],
+      "css": ["wiki-css.css"]
+    }],
+  "manifest_version": 2
+}
